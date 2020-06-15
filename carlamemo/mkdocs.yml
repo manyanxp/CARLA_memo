@@ -1,1 +1,7 @@
-site_name: My Docs
+site_name: CARLAについてのメモ
+theme: readthedocs
+pages:
+  - 'index.md'
+  - 'operate_carla.md'
+  - 'examples.md'
+  - 'about.md'

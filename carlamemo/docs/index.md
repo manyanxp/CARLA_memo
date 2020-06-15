@@ -1,8 +1,9 @@
-# CARLAについてのメモ
+# CARLAのインストール他
 
 # Reference
 
-[CARLA.org](https://carla.org/)
+- [CARLA.org](https://carla.org/)
+- [ROS Install](https://www.ros.org/install/)
 
 # 1. CARLA
 ## 2. CARLAのインストール
@@ -29,6 +30,7 @@ cd /opt/carla-simulator
 
 上記からダウンロードして、解凍すればOK。
 
+Windowsの場合には、DirectXがインストールされていないと、CARLAのサーバーを立ち上げた際にDirectX Errorが発生する。Liunxの場合には、opengl指定が必要な場合があり。（要検証）
 
 # 2. ROS
 
@@ -79,7 +81,7 @@ source ~/.bashrc
 ```
 ## 2.2. ROSブリッジのインストール
 
-CARLAとROSでブリッジするための、ROSブリッジをインストールする。
+CARLAとROSで連携するための、ROSブリッジをインストールする。
 
 #### a) Using apt repository
 
