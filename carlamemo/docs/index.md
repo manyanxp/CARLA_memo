@@ -83,6 +83,8 @@ source ~/.bashrc
 
 CARLAとROSで連携するための、ROSブリッジをインストールする。
 
+ref:[ROS Bridge](https://github.com/carla-simulator/ros-bridge)
+
 #### a) Using apt repository
 
 aptレポジトリを追加する。
