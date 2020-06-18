@@ -6,9 +6,9 @@
 - [ROS Install](https://www.ros.org/install/)
 
 # 1. CARLA
-## 2. CARLAのインストール
+## 1.1. CARLAのインストール
 
-#### a) deb CARLA インストール
+### a) deb CARLA インストール
 
 システムにCARLA 0.9.9 repositoryを追加する。
 
@@ -24,7 +24,7 @@ sudo apt-get update
 sudo apt-get install carla-simulator
 cd /opt/carla-simulator
 ```
-#### b) パッケージインストール
+### b) パッケージインストール
 
 [パッケージ](https://github.com/carla-simulator/carla/blob/master/Docs/download.md)
 
@@ -36,6 +36,20 @@ Windowsの場合には、DirectXがインストールされていないと、CAR
 
 CARLAとROSを連携するために、まずはROSをインストールする。その後、CARLAとROSをブリッジさせるROSブリッジをインストールする。
 先にROSが入っていない状態でROSブリッジをインストールしようとするとインストールできない可能性があるのて注意。
+
+ref:[rosdep](http://wiki.ros.org/rosdep)
+
+## 2.0. Pythonのバージョン
+
+使用するROSがROS Kinetic/Melodicのとき、ROS MelodicはUbunutu 18.04、ROS KineticはUbunutu 16.04向けの
+パッケージとなっている。
+
+このとき、使用するROS MelodicかKineticを使用する場合には、Python2を使用する必要がある。
+これは、ROS MelodicとKineticのrosdepがPython2(デフォルトでPython2向けの各種パッケージもインストールされる）向けで、Python3では動作しないようで、動作させるにはROSをNoeticにする必要があるが、ROS NetecはUbuntu20.04向けのようなので、使用するOS次第でROSが動作できな場合がある。
+
+
+
+CARLA、ROSで動作させる必要があるのであれば、Python2 (Python 2.7 later)を使用することをおすすめします。
 
 ## 2.1. ROSのインストール
 
@@ -106,6 +120,9 @@ sudo apt update &&
 sudo apt install carla-ros-bridge-melodic
 ```
 
+```
+CUDA_VISIBLE_DEVICES=1 DISPLAY= ./CarlaUE4.sh -quality-level=Epic -opengl
+```
 
 
 ## Commands

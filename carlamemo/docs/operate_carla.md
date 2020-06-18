@@ -1,6 +1,6 @@
 # CARLAの操作方法
 
-# Reference
+## Reference
 
 - [First Step](https://carla.readthedocs.io/en/latest/core_world/)
 
@@ -10,11 +10,11 @@ ClientとWorldはCARLAの2つの基本要素で、シミュレーションとそ
 CARLAのサイトでは、要素の基本と作成の定義から、それらの可能性について説明されている。
 
 
-## The Client
+### The Client
 
 クライアントは、CARLAアーキテクチャの主要な要素の1つ。サーバーに接続し、情報を取得し、コマンドの変更を行う。変更は、スクリプトを介して行う。クライアントはクライアント自身の機能に応じて、Worldに接続してシミュレーションを操作する。
 
-## Client creation
+### Client creation
 
 Clientがサーバーへ接続するには、以下の方法を用いる。
 
@@ -34,7 +34,7 @@ Clientが作成できたら、接続タイムアウトを設定します。こ�
 一度に複数のスクリプトを実行するのが一般的らしく、多くのClientを接続することが可能とのことだが、
 最大接続数については要検証。
 
-## Sample code to connect to the server
+### Sample code to connect to the server
 
 ```python
 
@@ -77,7 +77,7 @@ if __name__ == '__main__':
 2. main()関数内のcarla.Client()とclient.set_timeout()でサーバーへの接続を開始。
 
 
-## World connection
+### World connection
 
 Clientがサーバーへ接続できると、クライアントは現在のWorld情報を簡単に取得できる。
 
@@ -87,7 +87,7 @@ print(client.get_available_maps())
 world = client.load_world('Town01')
 ```
 
-## Sample code to get world infomation
+### Sample code to get world infomation
 
 ```python
 import carla
@@ -124,7 +124,7 @@ if __name__ == '__main__':
 2. client.load_world()では、client.get_world()と違い、MAP情報を指定してWorldオブジェクトを取得する。
 
 
-## Weather
+### Weather
 
 WeatherParametersクラスは、World内の天気を操作することができる。
 WeatherParametersクラスは、carla.Worldに適用できる照明と気象の仕様を含むオブジェクトを定義している。Worldオブジェクトに指定したい天気の状態を指定できる。
