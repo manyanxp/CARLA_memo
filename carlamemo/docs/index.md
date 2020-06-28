@@ -125,6 +125,61 @@ CUDA_VISIBLE_DEVICES=1 DISPLAY= ./CarlaUE4.sh -quality-level=Epic -opengl
 ```
 
 
+## 未編集情報
+
+### NVIDIA Docker
+
+- [NVIDIA Container Toolkit](https://github.com/NVIDIA/nvidia-docker)
+- [Autoware-AI Doccer](https://github.com/Autoware-AI/autoware.ai/wiki/Generic-x86-Docker)
+- [Qiita Autoware 参考](https://qiita.com/misoragod/items/6d9ce990eb19c105dd96)
+
+### issues
+- [setting up with docker [still not working] #77](https://github.com/carla-simulator/carla-autoware/issues/77)
+- [PythonAPI sensor actor cleanup "no stream available" #1821](https://github.com/carla-simulator/carla/issues/1821)
+
+### How to bridge CARLA and Autoware
+
+CARLAとAutowreの連携方法として、以下のドキュメントが公開されている。
+
+[Autoware in Carla](https://github.com/carla-simulator/carla-autoware)
+
+CARLAとAutowareを統合したものらしい。
+
+Requirementsとして、以下のものが挙げられていて
+
+- ROS kinetic
+- Autoware (tested with 1.12.0)
+- CARLA 0.9.6
+
+CARLAの最新が、0.9.9なので少し古いバージョンで試されたものらしい。
+現状では、去年以降のコミットがないので、開発は行われていない？
+
+以下の環境で試しているが、うまく実行できない。
+
+- Ubuntu 18.04
+- ROS melodic
+- carla-autoware
+- Python 2.7
+- CARLA 0.9.9 or 0.9.6(Client と ServerのPythonAPIの使用バージョン(0.x.x)は合わせたが良い。)
+
+CARLAは0.9.6をDockerコンテナで起動して、carla-autowareをDockerコンテナもしくは、ビルドで試したが、ドキュメント手順のroslaunch [path]/devel.launchのときにエラーで終了してしまう。
+
+現状、Autowareとの連携までに身につけるべきスキルの流れとしたら
+
+CARLA→ROS→Autowareだとは思うが、ここの知識が必要になるので何ともいえない。
+他、Dockerを使用するのであれば、Dockerなどの知識も必要になる。
+
+一度、Ubuntu自体を16.04にするか、迷うところ。
+
+
+### Recommended skills you should have and recommend
+
+- Docker
+- Python
+- C++
+- Linux
+- ROS
+
 ## Commands
 
 * `mkdocs new [dir-name]` - Create a new project.
