@@ -3,5 +3,9 @@ theme: readthedocs
 pages:
   - 'index.md'
   - 'operate_carla.md'
+  - 'carla_ros_bridge.md'
   - 'examples.md'
   - 'about.md'
+
+extra_css:
+  - ./css/extra.css

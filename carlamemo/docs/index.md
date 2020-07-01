@@ -166,7 +166,8 @@ CARLAは0.9.6をDockerコンテナで起動して、carla-autowareをDockerコ�
 
 現状、Autowareとの連携までに身につけるべきスキルの流れとしたら
 
-CARLA→ROS→Autowareだとは思うが、ここの知識が必要になるので何ともいえない。
+CARLA→ROS→Autowareだとは思う。
+流れとしては上記でもいいが、個々の機能量がボリュームあるので、個々の知識は要勉強。
 他、Dockerを使用するのであれば、Dockerなどの知識も必要になる。
 
 一度、Ubuntu自体を16.04にするか、迷うところ。
@@ -179,6 +180,12 @@ CARLA→ROS→Autowareだとは思うが、ここの知識が必要になるの�
 - C++
 - Linux
 - ROS
+
+### 未整理
+
+- [INTEGRATION OF AUTOWARE AND ROS](https://drive.google.com/file/d/1uO6nBaFirrllb08OeqGAMVLApQ6EbgAt/view)
+- [carla-hdmaps](http://dist.carla.org/carla-hdmaps/pool/main/c/carla-hdmaps/)
+- [Autoware-Manuals](https://github.com/CPFL/Autoware-Manuals)
 
 ## Commands
 
