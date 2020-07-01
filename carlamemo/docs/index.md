@@ -145,32 +145,19 @@ CARLAとAutowreの連携方法として、以下のドキュメントが公開�
 
 CARLAとAutowareを統合したものらしい。
 
-Requirementsとして、以下のものが挙げられていて
+現在は、[auteware.ai](https://github.com/Autoware-AI/autoware.ai)のリポジトリにシミュレーターのパッケージとして統合されているようで、[Autoware in Carla](https://github.com/carla-simulator/carla-autoware)は古い情報になる。
 
-- ROS kinetic
-- Autoware (tested with 1.12.0)
-- CARLA 0.9.6
+新しい情報を確認する場合には、[auteware.ai](https://github.com/Autoware-AI/autoware.ai)のリポジトリをクローンを行い以下の場所を確認。
 
-CARLAの最新が、0.9.9なので少し古いバージョンで試されたものらしい。
-現状では、去年以降のコミットがないので、開発は行われていない？
+```
+ $ cd [install path]/autoware.ai/src/autoware/simulation
+```
 
-以下の環境で試しているが、うまく実行できない。
+[2020/07/01]
 
-- Ubuntu 18.04
-- ROS melodic
-- carla-autoware
-- Python 2.7
-- CARLA 0.9.9 or 0.9.6(Client と ServerのPythonAPIの使用バージョン(0.x.x)は合わせたが良い。)
+[Could not install carla-hdmaps #2953](https://github.com/carla-simulator/carla/issues/2953)
 
-CARLAは0.9.6をDockerコンテナで起動して、carla-autowareをDockerコンテナもしくは、ビルドで試したが、ドキュメント手順のroslaunch [path]/devel.launchのときにエラーで終了してしまう。
-
-現状、Autowareとの連携までに身につけるべきスキルの流れとしたら
-
-CARLA→ROS→Autowareだとは思う。
-流れとしては上記でもいいが、個々の機能量がボリュームあるので、個々の知識は要勉強。
-他、Dockerを使用するのであれば、Dockerなどの知識も必要になる。
-
-一度、Ubuntu自体を16.04にするか、迷うところ。
+autware.aiのsimulationディレクトリにあるREADME.mdの手順に従ってインストールすると、上記の問題が発生して、インストールが実行できない。
 
 
 ### Recommended skills you should have and recommend
