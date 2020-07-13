@@ -127,6 +127,35 @@ CUDA_VISIBLE_DEVICES=1 DISPLAY= ./CarlaUE4.sh -quality-level=Epic -opengl
 
 ## 未編集情報
 
+
+
+## How to run an autoware
+
+To run Autoware within CARLA please use the following execution order:
+
+1. CARLA Server
+2. Autoware (including carla-ros-bridge and additional nodes)
+
+You need two terminals:
+
+    #Terminal 1
+
+    cd /opt/carla/bin
+    ./CarlaUE4.sh
+
+For details, please refer to the [CARLA documentation](https://carla.readthedocs.io/en/latest/).
+
+    #Terminal 2
+
+    export CARLA_MAPS_PATH=/opt/carla/HDMaps/
+
+    source /opt/carla-ros-bridge/$ROS_DISTRO/setup.bash
+    source ~/autoware.ai/install/setup.bash
+    roslaunch carla_autoware_bridge carla_autoware_bridge_with_manual_control.launch
+
+
+
+
 ### NVIDIA Docker
 
 - [NVIDIA Container Toolkit](https://github.com/NVIDIA/nvidia-docker)
